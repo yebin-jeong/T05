@@ -5,28 +5,8 @@
     <Top/>
 
     <div style="display:flex; width:100%; padding: 0% 5%; justify-content: space-between; margin-bottom: 3%">
-      <div class="house-notice">
-        <div class="house-logo" style="margin-top:5%;">
-          <img class="sh-logo" src="./assets/image2.svg" />
-          <img class="lh-logo" src="./assets/image1.svg" />
-        </div>
-        <div class="div-22-span2">
-            주거복지 공고
-            <br />
-            한눈에 보기
-        </div>
-        <div class="total-count">
-          <span>
-            <span class="_113-span">
-              전체
-              <br />
-            </span>
-            <span class="_113-span2">113</span>
-            <span class="_113-span3">건</span>
-          </span>
-        </div>
-      </div>
-        
+      
+      <HouseNotice/>
       <div class="address-box">
         <div class="current-address">
           <button class="current-address-change-button">
@@ -42,7 +22,6 @@
             상암동 월드컵북로 123
           </div>
           
-          
         </div>
         <div class="future-address">
           <button class="future-address-change-button">
@@ -57,11 +36,8 @@
             <br />
             우장산동 우장산로 123
           </div>
-
-        </div>
-        
+        </div>   
       </div>
-
     </div>
 
     <div style="display:flex; width:100%; padding: 0% 5%; justify-content: space-between;">
@@ -75,28 +51,8 @@
       </button>
     </div>
     
-
-    <div class="footer">
-      <div class="div21">기관별 연락처</div>
-      <div style="display:flex;">
-        <div class="tel-toggle">
-          <img class="formkit-up" src="./assets/formkit_up.svg" />
-          
-          <div class="div18">지역별 복지</div>
-        </div>
-
-        <div class="tel-toggle">
-          <img class="formkit-up" src="./assets/formkit_up.svg" />
-          <div class="div18">정부 기관</div>
-        </div>
-      </div>
+    <Footer/>
     
-      <ul class="bottom-navbar">
-        <li>개인정보처리방침</li>
-        <li>홈페이지 이용약관</li>
-        <li>품질오류신고 및 확인</li>
-      </ul>
-    </div>
     
   </div>
 
@@ -105,11 +61,15 @@
 <script>
   import FAQ from './components/FAQ.vue';
   import Top from './components/Top.vue'
+  import HouseNotice from './components/HouseNotice.vue';
+  import Footer from './components/Footer.vue';
   export default {
     name: 'App',
     components: {
       FAQ,
       Top,
+      HouseNotice,
+      Footer,
     },
     data() {
       return {};
@@ -135,18 +95,6 @@
     inset: 0;
   }
 
-  .house-notice{
-    background: #3795ed;
-    border-radius: 15px;
-    width: 284.79px;
-    height: 334px;
-    position: static;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
   .future-address {
     background: #d4e3d0;
     border-radius: 15px;
@@ -168,16 +116,6 @@
     font-size: 36px;
     font-weight: 400;
 
-  }
-
-  ._123 {
-    color: #000000;
-    text-align: center;
-    font-family: "Inter-Regular", sans-serif;
-    font-size: 36px;
-    font-weight: 400;
-    position: relative;
-    width: 367px;
   }
 
   .address-box{
@@ -267,32 +205,7 @@
     font-weight: 400;
   }
 
-  .footer {
-    background: #dfdee0;
-    width: 100%;
-    height: 273px;
-    position: absolute;
-
-    top: 751px;
-  }
   
-  .bottom-navbar{
-    color: #000000;
-    text-align: left;
-    font-family: "Inter-Regular", sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-
-    display: flex;
-    
-    align-items: center;
-    padding-left: 5%;
-    margin-top: 2%
-  }
-
-  .bottom-navbar li{
-    margin-right: 3%
-  }
 
   .div15 {
     color: #000000;
@@ -318,90 +231,7 @@
     width: 245px;
     height: 36.79px;
   }
-  .tel-toggle {
-    display: flex;
-
-    width: 409px;
-    height: 58.7px;
-    position: static;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.62);
-    border-width: 1px;
-    
-    margin-top:2%;
-    margin-left: 5%;
-    padding-top:1%;
-  }
-
-  .formkit-up {
-    width: 50px;
-    height: 17.52px;
-    position: static;
-    left: 430px;
-    top: 870.27px;
-    overflow: visible;
-    
-    border-color: black;
-    border-width: 1px;
-  }
   
-  .div18 {
-    color: rgba(0, 0, 0, 0.91);
-    text-align: left;
-    font-family: "Inter-Thin", sans-serif;
-    font-size: 24px;
-    font-weight: 100;
-    position: static;
-    left: 104px;
-    top: 864.14px;
-    width: 133px;
-    height: 45.54px;
-  }
-
-  .div21 {
-    margin-left: 5%;
-    margin-top:2%;
-    color: #000000;
-    text-align: center;
-    font-family: "Inter-ExtraBold", sans-serif;
-    font-size: 25px;
-    font-weight: 800;
-    position: static;
-    left: 81px;
-    top: 791px;
-    width: 170px;
-    height: 29px;
-  }
-
-  .total-count {
-    color: #ffffff;
-    text-align: center;
-
-    background: #1264af;
-    border-radius: 15px;
-    width: 100%;
-    height: 126.73px;
-    position: static;
-    bottom: 0px;
-  }
-  ._113-span {
-    color: #ffffff;
-    font-family: "Inter-Bold", sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-  }
-  ._113-span2 {
-    color: #ffffff;
-    font-family: "Inter-Bold", sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-  }
-  ._113-span3 {
-    color: #ffffff;
-    font-family: "Inter-Bold", sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-  }
   .div22 {
     color: #ffffff;
     text-align: center;
@@ -423,18 +253,7 @@
     font-size: 32px;
     font-weight: 700;
   }
-  .sh-logo {
-    width: 84.26px;
-    height: 55px;
-    position: static;
-    object-fit: cover;
-  }
-  .lh-logo {
-    width: 87.17px;
-    height: 45px;
-    position: static;
-    object-fit: cover;
-  }
+
 
   a,
   button,
