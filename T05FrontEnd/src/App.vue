@@ -1,82 +1,80 @@
 <!-- index.html -->
 <template>
-  <div class="div">
-    <div class="top">
-      <div class="logo">
-        <div class="logotext">
+  <div class="div" style="display:flex; flex-direction: column; ">
+
+    <Top/>
+
+    <div style="display:flex; width:100%; padding: 0% 5%; justify-content: space-between; margin-bottom: 3%">
+      <div class="house-notice">
+        <div class="house-logo" style="margin-top:5%;">
+          <img class="sh-logo" src="./assets/image2.svg" />
+          <img class="lh-logo" src="./assets/image1.svg" />
+        </div>
+        <div class="div-22-span2">
+            주거복지 공고
+            <br />
+            한눈에 보기
+        </div>
+        <div class="total-count">
           <span>
-            <span class="logotext-span">이사</span>
-            <span class="logotext-span2">소통</span>
+            <span class="_113-span">
+              전체
+              <br />
+            </span>
+            <span class="_113-span2">113</span>
+            <span class="_113-span3">건</span>
           </span>
         </div>
-        <img class="vector" src="./assets/house.svg" />
       </div>
-      <img class="menu-icon" src="./assets/menu.svg" />
-      <div class="user">
-        <div class="frame-1">
-          <div class="username">정예빈</div>
-        </div>
-        <img class="account-circle" src="./assets/account_circle.svg" />
-      </div>
-      
-    </div>
-
-    <FAQ/>
-
-    <div class="address-box">
-      <div class="current-address">
-        <div class="rectangle-6"></div>
-        <button class="current-address-change-button">
-            주소지 설정
-        </button>
-        <div class="rectangle-84">
-          <div class="_1232">
+        
+      <div class="address-box">
+        <div class="current-address">
+          <button class="current-address-change-button">
+            <img
+            class="button-arrow"
+            src="./assets/material-symbols-light_transit-enterexit.svg"
+            />
+              <span style="top: 50%; transform: translate(-50%, -50%);">주소지 설정</span>
+          </button>
+          <div class="rectangle-8">
             서울특별시 마포구
             <br />
             상암동 월드컵북로 123
           </div>
+          
+          
         </div>
-        
-        <img
-          class="material-symbols-light-transit-enterexit2"
-          src="./assets/material-symbols-light_transit-enterexit.svg"
-        />
-      </div>
-
-      <div class="future-address">
-        <div class="rectangle-7"></div>
-        <div class="rectangle-8">
-          <div class="_123">
+        <div class="future-address">
+          <button class="future-address-change-button">
+            <img
+                class="button-arrow"
+                src="./assets/material-symbols-light_transit-enterexit.svg"
+              />
+            주소지 설정
+          </button>
+          <div class="rectangle-8">
             서울특별시 강서구
             <br />
             우장산동 우장산로 123
           </div>
+
         </div>
         
-        <div class="div4">
-          <button class="future-address-change-button">
-            주소지 설정
-          </button>
-          <img
-            class="material-symbols-light-transit-enterexit"
-            src="./assets/material-symbols-light_transit-enterexit.svg"
-          />
-        </div>  
       </div>
-      
-      
+
     </div>
 
-    <div class="compare-button">
-      <div class="rectangle-9"></div>
+    <div style="display:flex; width:100%; padding: 0% 5%; justify-content: space-between;">
+      <FAQ/>
+      <button class="compare-button">
         <img class="arrow-right-circle" src="./assets/arrow-right-circle.svg" />
-      <div class="div12">
         <span>
           <span class="div-12-span">복지서비스</span>
           <span class="div-12-span2">비교하기</span>
         </span>
-      </div>
+      </button>
     </div>
+    
 
     <div class="footer">
       <div class="div21">기관별 연락처</div>
@@ -100,43 +98,18 @@
       </ul>
     </div>
     
-    <div class="house-notice">
-      <div class="rectangle-2"></div>
-      <div class="rectangle-4"></div>
-      <div class="total-count">
-        <span>
-          <span class="_113-span">
-            전체
-            <br />
-          </span>
-          <span class="_113-span2">113</span>
-          <span class="_113-span3">건</span>
-        </span>
-      </div>
-      <div class="div22">
-        <span>
-          <span class="div-22-span"></span>
-          <span class="div-22-span2">
-            주거복지 공고
-            <br />
-            한눈에 보기
-          </span>
-        </span>
-      </div>
-      <img class="image-2" src="./assets/image2.svg" />
-      <img class="image-1" src="./assets/image1.svg" />
-    </div>
   </div>
 
 </template>
 
 <script>
   import FAQ from './components/FAQ.vue';
-
+  import Top from './components/Top.vue'
   export default {
     name: 'App',
     components: {
       FAQ,
+      Top,
     },
     data() {
       return {};
@@ -156,39 +129,47 @@
     overflow: hidden;
   }
 
+
   .div3 {
     position: absolute;
     inset: 0;
   }
-  .rectangle-7 {
+
+  .house-notice{
+    background: #3795ed;
+    border-radius: 15px;
+    width: 284.79px;
+    height: 334px;
+    position: static;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .future-address {
     background: #d4e3d0;
     border-radius: 15px;
-    width: 440px;
+    width: 45%;
     height: 334px;
-    position: absolute;
-    left: 921px;
-    top: 185px;
+    position: static;
   }
   .rectangle-8 {
     background: #ffffff;
     border-radius: 15px;
-    width: 385px;
+    width: 90%;
     height: 191px;
-    position: absolute;
-    left: 948px;
-    top: 302px;
+    position: static;
+    margin-left:5%;
+
+    color: #000000;
+    text-align: center;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+
   }
-  .frame-3 {
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 944px;
-    top: 343px;
-  }
+
   ._123 {
     color: #000000;
     text-align: center;
@@ -198,19 +179,21 @@
     position: relative;
     width: 367px;
   }
-  .div4 {
-    width: 208px;
-    height: 67px;
-    position: static;
+
+  .address-box{
+    display:flex;
+    width:75%;
+    justify-content: space-between;
   }
+
   .future-address-change-button {
     background: #4f7d43;
     border-radius: 15px;
     width: 208px;
     height: 67px;
-    position: absolute;
-    left: 949px;
-    top: 209px;
+    position: relative;
+
+    margin: 5%;
 
     color: #ffffff;
     text-align: center;
@@ -219,184 +202,56 @@
     font-weight: 600;
   }
 
-  .material-symbols-light-transit-enterexit {
+  .button-arrow {
     width: 40px;
     height: 42px;
-    position: absolute;
-    right: 251px;
-    top: 263px;
-    overflow: visible;
-  }
-  .logo {
-    width: 198.18px;
-    height: 57.94px;
     position: static;
-  }
-  .logotext {
-    text-align: left;
-    position: absolute;
-    left: 176.18px;
-    top: 72.94px;
-  }
-  .logotext-span {
-    color: #b8adad;
-    font-family: "Inter-Bold", sans-serif;
-    font-size: 32px;
-    letter-spacing: 0.01em;
-    font-weight: 700;
-  }
-
-  .logotext-span2 {
-    color: #268ae5;
-    font-family: "Inter-Bold", sans-serif;
-    font-size: 40px;
-    letter-spacing: -0.06em;
-    font-weight: 700;
-  }
-
-  .vector {
-    width: 8%;
-    height: 8%;
-    position: absolute;
-    right: 88%;
-    bottom: 86%;
     overflow: visible;
   }
 
-  .menu-icon {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 1311px;
-    top: 57px;
-    overflow: visible;
-  }
-  .user {
-    width: 142px;
-    height: 55px;
-    position: static;
-  }
-  .frame-1 {
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 1195px;
-    top: 59px;
-  }
-  .username {
-    color: #49454f;
-    text-align: left;
-    font-family: "Inter-Thin", sans-serif;
-    font-size: 24px;
-    font-weight: 100;
-    position: relative;
-  }
-  .account-circle {
-    width: 55px;
-    height: 55px;
-    position: absolute;
-    left: 1140px;
-    top: 58px;
-    overflow: visible;
-  }
-  .rectangle-6 {
+  .current-address{
     background: #c8d8f6;
     border-radius: 15px;
-    width: 440px;
+    width: 45%;
     height: 333px;
-    position: absolute;
-    left: 433px;
-    top: 186px;
+    position: static;
   }
+
   .current-address-change-button {
     background: #1f72d3;
     border-radius: 15px;
     width: 208px;
     height: 67px;
-    position: absolute;
-    left: 461px;
-    top: 210px;
+    position: relative;
+    margin: 5%;
     text-align: center;
 
     color: #ffffff;
     font-family: "Inter-SemiBold", sans-serif;
     font-size: 25px;
     font-weight: 600;
-    position: absolute;
-
   }
 
-  .material-symbols-light-transit-enterexit2 {
-    width: 40px;
-    height: 42px;
-    position: absolute;
-    right: 739px;
-    top: 264px;
-    overflow: visible;
-  }
-  .rectangle-84 {
-    background: #ffffff;
-    border-radius: 15px;
-    width: 385px;
-    height: 191px;
-    position: absolute;
-    left: 461px;
-    top: 302px;
-  }
-  .frame-2 {
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    width: 466px;
-    position: absolute;
-    left: 420px;
-    top: 344px;
-  }
-  ._1232 {
-    color: #000000;
-    text-align: center;
-    font-family: "Inter-Regular", sans-serif;
-    font-size: 36px;
-    font-weight: 400;
-    position: relative;
-    width: 381px;
-  }
-  .rectangle-9 {
+  .compare-button {
     background: #1f72d3;
     border-radius: 15px;
-    width: 932px;
+    width: 75%;
     height: 126px;
-    position: absolute;
-    left: 429px;
-    top: 570px;
-  }
-  .arrow-right-circle {
-    width: 66.43px;
-    height: 69px;
-    position: absolute;
-    left: 1051px;
-    top: 599px;
-    overflow: visible;
-  }
-  .div12 {
+    position: static;
+
     color: #ffffff;
     text-align: center;
     font-family: "-", sans-serif;
     font-size: 32px;
     font-weight: 400;
-    position: absolute;
-    left: 753px;
-    top: 615px;
-    width: 300px;
-    height: 40px;
   }
+  .arrow-right-circle {
+    width: 66.43px;
+    height: 69px;
+    position: static;
+    overflow: visible;
+  }
+
   .div-12-span {
     color: #ffffff;
     font-family: "Inter-SemiBold", sans-serif;
@@ -414,10 +269,10 @@
 
   .footer {
     background: #dfdee0;
-    width: 1440px;
+    width: 100%;
     height: 273px;
     position: absolute;
-    left: 0px;
+
     top: 751px;
   }
   
@@ -517,32 +372,17 @@
     width: 170px;
     height: 29px;
   }
-  .rectangle-2 {
-    background: #3795ed;
-    border-radius: 15px;
-    width: 284.79px;
-    height: 334px;
-    position: absolute;
-    left: 82.84px;
-    top: 185px;
-  }
-  .rectangle-4 {
-    background: #1264af;
-    border-radius: 15px;
-    width: 285.63px;
-    height: 126.73px;
-    position: absolute;
-    left: 82px;
-    top: 392.27px;
-  }
+
   .total-count {
     color: #ffffff;
     text-align: center;
-    position: absolute;
-    left: 152.15px;
-    top: 407.31px;
-    width: 146.15px;
-    height: 111.69px;
+
+    background: #1264af;
+    border-radius: 15px;
+    width: 100%;
+    height: 126.73px;
+    position: static;
+    bottom: 0px;
   }
   ._113-span {
     color: #ffffff;
@@ -565,7 +405,7 @@
   .div22 {
     color: #ffffff;
     text-align: center;
-    position: absolute;
+    position: static;
     left: 107.64px;
     top: 281px;
     width: 236.99px;
@@ -583,20 +423,16 @@
     font-size: 32px;
     font-weight: 700;
   }
-  .image-2 {
+  .sh-logo {
     width: 84.26px;
     height: 55px;
-    position: absolute;
-    left: 245px;
-    top: 211px;
+    position: static;
     object-fit: cover;
   }
-  .image-1 {
+  .lh-logo {
     width: 87.17px;
     height: 45px;
-    position: absolute;
-    left: 128.87px;
-    top: 216px;
+    position: static;
     object-fit: cover;
   }
 
