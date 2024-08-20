@@ -1,119 +1,140 @@
 <!-- index.html -->
 <template>
   <div class="div">
-    <div class="rectangle-11"></div>
-    <div class="div2">
-      <span>
-        <span class="div-2-span">자주 묻는</span>
-        <span class="div-2-span2">질문</span>
-      </span>
-    </div>
-    <div class="rectangle-7"></div>
-    <div class="rectangle-8"></div>
-    <div class="frame-3">
-      <div class="_123">
-        서울특별시 강서구
-        <br />
-        우장산동 우장산로 123
+    <div class="top">
+      <div class="div6">
+        <div class="div7">
+          <span>
+            <span class="div-7-span">이</span>
+            <span class="div-7-span2">사</span>
+            <span class="div-7-span3">소</span>
+            <span class="div-7-span4">통</span>
+          </span>
+        </div>
+        <img class="vector" src="./assets/house.svg" />
       </div>
+      <img class="div8" src="./assets/menu.svg" />
+      <div class="div9">
+        <div class="frame-1">
+          <div class="div10">정예빈</div>
+        </div>
+        <img class="account-circle" src="./assets/account_circle.svg" />
+      </div>
+      
     </div>
-    <div class="div4">
-      <div class="rectangle-82"></div>
-      <div class="div5">주소지 설정</div>
-      <img
-        class="material-symbols-light-transit-enterexit"
-        src="./assets/material-symbols-light_transit-enterexit.svg"
-      />
-    </div>
-    <div class="div6">
-      <div class="div7">
+    <div class="FAQ">
+      <div class="rectangle-11"></div>
+      <div class="div2">
         <span>
-          <span class="div-7-span">이</span>
-          <span class="div-7-span2">사</span>
-          <span class="div-7-span3">소</span>
-          <span class="div-7-span4">통</span>
+          <span class="div-2-span">자주 묻는</span>
+          <span class="div-2-span2">질문</span>
         </span>
       </div>
-      <img class="vector" src="./assets/house.svg" />
     </div>
-    <img class="div8" src="./assets/menu.svg" />
-    <div class="div9">
-      <div class="frame-1">
-        <div class="div10">정예빈</div>
+    <div class="address-box">
+      <div class="current-address">
+        <div class="rectangle-6"></div>
+        <div class="div4">
+          <div class="rectangle-83"></div>
+          <div class="div11">주소지 설정</div>
+          <img
+            class="material-symbols-light-transit-enterexit2"
+            src="./assets/material-symbols-light_transit-enterexit.svg"
+          />
+        </div>
       </div>
-      <img class="account-circle" src="./assets/account_circle.svg" />
-    </div>
-    <div class="rectangle-6"></div>
-    <div class="div4">
-      <div class="rectangle-83"></div>
-      <div class="div11">주소지 설정</div>
-      <img
-        class="material-symbols-light-transit-enterexit2"
-        src="./assets/material-symbols-light_transit-enterexit.svg"
-      />
-    </div>
-    <div class="rectangle-84"></div>
-    <div class="frame-2">
-      <div class="_1232">
-        서울특별시 마포구
-        <br />
-        상암동 월드컵북로 123
+
+      <div class="future-address">
+        <div class="rectangle-7"></div>
+        <div class="rectangle-8"></div>
+        <div class="frame-3">
+          <div class="_123">
+            서울특별시 강서구
+            <br />
+            우장산동 우장산로 123
+          </div>
+        </div>
+        <div class="div4">
+          <div class="rectangle-82"></div>
+          <div class="div5">주소지 설정</div>
+          <img
+            class="material-symbols-light-transit-enterexit"
+            src="./assets/material-symbols-light_transit-enterexit.svg"
+          />
+        </div>  
       </div>
-    </div>
-    <div class="rectangle-9"></div>
-    <img class="arrow-right-circle" src="./assets/arrow-right-circle.svg" />
-    <div class="div12">
-      <span>
-        <span class="div-12-span">복지서비스</span>
-        <span class="div-12-span2">비교하기</span>
-      </span>
-    </div>
-    <div class="rectangle-20"></div>
-    <div class="div13">
-      <div class="div14">개인정보처리방침</div>
-      <div class="div15">홈페이지 이용약관</div>
-      <div class="div16">
-        품질오류신고 및 확인
-        <br />
-      </div>
-    </div>
-    <div class="div17">
-      <div class="rectangle-16"></div>
-      <img class="formkit-up" src="./assets/formkit_up.svg" />
-      <div class="line-1"></div>
-      <div class="div18">지역별 복지</div>
-    </div>
-    <div class="div19">
-      <div class="rectangle-21"></div>
-      <img class="formkit-up2" src="./assets/formkit_up.svg" />
-      <div class="line-2"></div>
-      <div class="div20">정부 기관</div>
-    </div>
-    <div class="div21">기관별 연락처</div>
-    <div class="rectangle-2"></div>
-    <div class="rectangle-4"></div>
-    <div class="_113">
-      <span>
-        <span class="_113-span">
-          전체
+      
+      <div class="rectangle-84"></div>
+      <div class="frame-2">
+        <div class="_1232">
+          서울특별시 마포구
           <br />
-        </span>
-        <span class="_113-span2">113</span>
-        <span class="_113-span3">건</span>
-      </span>
+          상암동 월드컵북로 123
+        </div>
+      </div>
     </div>
-    <div class="div22">
-      <span>
-        <span class="div-22-span"></span>
-        <span class="div-22-span2">
-          주거복지 공고
+    <div class="compare-button">
+      <div class="rectangle-9"></div>
+        <img class="arrow-right-circle" src="./assets/arrow-right-circle.svg" />
+      <div class="div12">
+        <span>
+          <span class="div-12-span">복지서비스</span>
+          <span class="div-12-span2">비교하기</span>
+        </span>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="rectangle-20"></div>
+      <div class="div13">
+        <div class="div14">개인정보처리방침</div>
+        <div class="div15">홈페이지 이용약관</div>
+        <div class="div16">
+          품질오류신고 및 확인
           <br />
-          한눈에 보기
-        </span>
-      </span>
+        </div>
+      </div>
+    
+      <div class="div17">
+        <div class="rectangle-16"></div>
+        <img class="formkit-up" src="./assets/formkit_up.svg" />
+        <div class="line-1"></div>
+        <div class="div18">지역별 복지</div>
+      </div>
+      <div class="div19">
+        <div class="rectangle-21"></div>
+        <img class="formkit-up2" src="./assets/formkit_up.svg" />
+        <div class="line-2"></div>
+        <div class="div20">정부 기관</div>
+      </div>
+      <div class="div21">기관별 연락처</div>
+      <div class="rectangle-2"></div>
+      <div class="rectangle-4"></div>
     </div>
-    <img class="image-2" src="./assets/image2.svg" />
-    <img class="image-1" src="./assets/image1.svg" />
+    
+    <div class="house-notice">
+      <div class="_113">
+        <span>
+          <span class="_113-span">
+            전체
+            <br />
+          </span>
+          <span class="_113-span2">113</span>
+          <span class="_113-span3">건</span>
+        </span>
+      </div>
+      <div class="div22">
+        <span>
+          <span class="div-22-span"></span>
+          <span class="div-22-span2">
+            주거복지 공고
+            <br />
+            한눈에 보기
+          </span>
+        </span>
+      </div>
+      <img class="image-2" src="./assets/image2.svg" />
+      <img class="image-1" src="./assets/image1.svg" />
+    </div>
   </div>
 
 </template>
