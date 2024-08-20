@@ -2,61 +2,61 @@
 <template>
   <div class="div">
     <div class="top">
-      <div class="div6">
-        <div class="div7">
+      <div class="logo">
+        <div class="logotext">
           <span>
-            <span class="div-7-span">이</span>
-            <span class="div-7-span2">사</span>
-            <span class="div-7-span3">소</span>
-            <span class="div-7-span4">통</span>
+            <span class="logotext-span">이사</span>
+            <span class="logotext-span2">소통</span>
           </span>
         </div>
         <img class="vector" src="./assets/house.svg" />
       </div>
-      <img class="div8" src="./assets/menu.svg" />
-      <div class="div9">
+      <img class="menu-icon" src="./assets/menu.svg" />
+      <div class="user">
         <div class="frame-1">
-          <div class="div10">정예빈</div>
+          <div class="username">정예빈</div>
         </div>
         <img class="account-circle" src="./assets/account_circle.svg" />
       </div>
       
     </div>
-    <div class="FAQ">
-      <div class="rectangle-11"></div>
-      <div class="div2">
-        <span>
-          <span class="div-2-span">자주 묻는</span>
-          <span class="div-2-span2">질문</span>
-        </span>
-      </div>
-    </div>
+
+    <FAQ/>
+
     <div class="address-box">
       <div class="current-address">
         <div class="rectangle-6"></div>
-        <div class="div4">
-          <div class="rectangle-83"></div>
-          <div class="div11">주소지 설정</div>
-          <img
-            class="material-symbols-light-transit-enterexit2"
-            src="./assets/material-symbols-light_transit-enterexit.svg"
-          />
+        <button class="current-address-change-button">
+            주소지 설정
+        </button>
+        <div class="rectangle-84">
+          <div class="_1232">
+            서울특별시 마포구
+            <br />
+            상암동 월드컵북로 123
+          </div>
         </div>
+        
+        <img
+          class="material-symbols-light-transit-enterexit2"
+          src="./assets/material-symbols-light_transit-enterexit.svg"
+        />
       </div>
 
       <div class="future-address">
         <div class="rectangle-7"></div>
-        <div class="rectangle-8"></div>
-        <div class="frame-3">
+        <div class="rectangle-8">
           <div class="_123">
             서울특별시 강서구
             <br />
             우장산동 우장산로 123
           </div>
         </div>
+        
         <div class="div4">
-          <div class="rectangle-82"></div>
-          <div class="div5">주소지 설정</div>
+          <button class="future-address-change-button">
+            주소지 설정
+          </button>
           <img
             class="material-symbols-light-transit-enterexit"
             src="./assets/material-symbols-light_transit-enterexit.svg"
@@ -64,15 +64,9 @@
         </div>  
       </div>
       
-      <div class="rectangle-84"></div>
-      <div class="frame-2">
-        <div class="_1232">
-          서울특별시 마포구
-          <br />
-          상암동 월드컵북로 123
-        </div>
-      </div>
+      
     </div>
+
     <div class="compare-button">
       <div class="rectangle-9"></div>
         <img class="arrow-right-circle" src="./assets/arrow-right-circle.svg" />
@@ -83,36 +77,33 @@
         </span>
       </div>
     </div>
+
     <div class="footer">
-      <div class="rectangle-20"></div>
-      <div class="div13">
-        <div class="div14">개인정보처리방침</div>
-        <div class="div15">홈페이지 이용약관</div>
-        <div class="div16">
-          품질오류신고 및 확인
-          <br />
+      <div class="div21">기관별 연락처</div>
+      <div style="display:flex;">
+        <div class="tel-toggle">
+          <img class="formkit-up" src="./assets/formkit_up.svg" />
+          
+          <div class="div18">지역별 복지</div>
+        </div>
+
+        <div class="tel-toggle">
+          <img class="formkit-up" src="./assets/formkit_up.svg" />
+          <div class="div18">정부 기관</div>
         </div>
       </div>
     
-      <div class="div17">
-        <div class="rectangle-16"></div>
-        <img class="formkit-up" src="./assets/formkit_up.svg" />
-        <div class="line-1"></div>
-        <div class="div18">지역별 복지</div>
-      </div>
-      <div class="div19">
-        <div class="rectangle-21"></div>
-        <img class="formkit-up2" src="./assets/formkit_up.svg" />
-        <div class="line-2"></div>
-        <div class="div20">정부 기관</div>
-      </div>
-      <div class="div21">기관별 연락처</div>
-      <div class="rectangle-2"></div>
-      <div class="rectangle-4"></div>
+      <ul class="bottom-navbar">
+        <li>개인정보처리방침</li>
+        <li>홈페이지 이용약관</li>
+        <li>품질오류신고 및 확인</li>
+      </ul>
     </div>
     
     <div class="house-notice">
-      <div class="_113">
+      <div class="rectangle-2"></div>
+      <div class="rectangle-4"></div>
+      <div class="total-count">
         <span>
           <span class="_113-span">
             전체
@@ -140,7 +131,17 @@
 </template>
 
 <script>
+  import FAQ from './components/FAQ.vue';
 
+  export default {
+    name: 'App',
+    components: {
+      FAQ,
+    },
+    data() {
+      return {};
+    },  
+  };  
 </script>
 <!-- style.css -->
 <style>
@@ -154,45 +155,7 @@
     position: relative;
     overflow: hidden;
   }
-  .faq {
-    position: absolute;
-    inset: 0;
-  }
-  .rectangle-11 {
-    background: #ffffff;
-    border-radius: 15px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.33);
-    border-width: 2px;
-    width: 282px;
-    height: 126px;
-    position: absolute;
-    left: 86px;
-    top: 572px;
-  }
-  .div2 {
-    text-align: center;
-    font-family: "Inter-Bold", sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    position: absolute;
-    left: 106px;
-    top: 611px;
-    width: 237px;
-    height: 56px;
-  }
-  .div-2-span {
-    color: #000000;
-    font-family: "Inter-Bold", sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-  }
-  .div-2-span2 {
-    color: #0a69c1;
-    font-family: "Inter-Bold", sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-  }
+
   .div3 {
     position: absolute;
     inset: 0;
@@ -240,7 +203,7 @@
     height: 67px;
     position: static;
   }
-  .rectangle-82 {
+  .future-address-change-button {
     background: #4f7d43;
     border-radius: 15px;
     width: 208px;
@@ -248,18 +211,14 @@
     position: absolute;
     left: 949px;
     top: 209px;
-  }
-  .div5 {
+
     color: #ffffff;
-    text-align: left;
+    text-align: center;
     font-family: "Inter-SemiBold", sans-serif;
     font-size: 25px;
     font-weight: 600;
-    position: absolute;
-    left: 971.77px;
-    top: 225px;
-    width: 141.39px;
   }
+
   .material-symbols-light-transit-enterexit {
     width: 40px;
     height: 42px;
@@ -268,45 +227,33 @@
     top: 263px;
     overflow: visible;
   }
-  .div6 {
+  .logo {
     width: 198.18px;
     height: 57.94px;
     position: static;
   }
-  .div7 {
+  .logotext {
     text-align: left;
     position: absolute;
     left: 176.18px;
     top: 72.94px;
   }
-  .div-7-span {
+  .logotext-span {
     color: #b8adad;
     font-family: "Inter-Bold", sans-serif;
     font-size: 32px;
     letter-spacing: 0.01em;
     font-weight: 700;
   }
-  .div-7-span2 {
-    color: #b8adad;
-    font-family: "Inter-Bold", sans-serif;
-    font-size: 32px;
-    letter-spacing: 0.2em;
-    font-weight: 700;
-  }
-  .div-7-span3 {
+
+  .logotext-span2 {
     color: #268ae5;
     font-family: "Inter-Bold", sans-serif;
     font-size: 40px;
     letter-spacing: -0.06em;
     font-weight: 700;
   }
-  .div-7-span4 {
-    color: #268ae5;
-    font-family: "Inter-Bold", sans-serif;
-    font-size: 40px;
-    letter-spacing: -0.25em;
-    font-weight: 700;
-  }
+
   .vector {
     width: 8%;
     height: 8%;
@@ -316,7 +263,7 @@
     overflow: visible;
   }
 
-  .div8 {
+  .menu-icon {
     width: 50px;
     height: 50px;
     position: absolute;
@@ -324,7 +271,7 @@
     top: 57px;
     overflow: visible;
   }
-  .div9 {
+  .user {
     width: 142px;
     height: 55px;
     position: static;
@@ -340,7 +287,7 @@
     left: 1195px;
     top: 59px;
   }
-  .div10 {
+  .username {
     color: #49454f;
     text-align: left;
     font-family: "Inter-Thin", sans-serif;
@@ -365,7 +312,7 @@
     left: 433px;
     top: 186px;
   }
-  .rectangle-83 {
+  .current-address-change-button {
     background: #1f72d3;
     border-radius: 15px;
     width: 208px;
@@ -373,18 +320,16 @@
     position: absolute;
     left: 461px;
     top: 210px;
-  }
-  .div11 {
+    text-align: center;
+
     color: #ffffff;
-    text-align: left;
     font-family: "Inter-SemiBold", sans-serif;
     font-size: 25px;
     font-weight: 600;
     position: absolute;
-    left: 483.77px;
-    top: 226px;
-    width: 141.39px;
+
   }
+
   .material-symbols-light-transit-enterexit2 {
     width: 40px;
     height: 42px;
@@ -466,7 +411,8 @@
     font-size: 30px;
     font-weight: 400;
   }
-  .rectangle-20 {
+
+  .footer {
     background: #dfdee0;
     width: 1440px;
     height: 273px;
@@ -474,23 +420,25 @@
     left: 0px;
     top: 751px;
   }
-  .div13 {
-    width: 670px;
-    height: 38.54px;
-    position: static;
-  }
-  .div14 {
+  
+  .bottom-navbar{
     color: #000000;
     text-align: left;
     font-family: "Inter-Regular", sans-serif;
     font-size: 24px;
     font-weight: 400;
-    position: absolute;
-    left: 81px;
-    top: 947px;
-    width: 195px;
-    height: 34.16px;
+
+    display: flex;
+    
+    align-items: center;
+    padding-left: 5%;
+    margin-top: 2%
   }
+
+  .bottom-navbar li{
+    margin-right: 3%
+  }
+
   .div15 {
     color: #000000;
     text-align: left;
@@ -515,111 +463,55 @@
     width: 245px;
     height: 36.79px;
   }
-  .div17 {
+  .tel-toggle {
+    display: flex;
+
     width: 409px;
     height: 58.7px;
     position: static;
-  }
-  .rectangle-16 {
-    background: #dfdee0;
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.62);
     border-width: 1px;
-    width: 409px;
-    height: 55px;
-    position: absolute;
-    left: 82px;
-    top: 851px;
+    
+    margin-top:2%;
+    margin-left: 5%;
+    padding-top:1%;
   }
+
   .formkit-up {
     width: 50px;
     height: 17.52px;
-    position: absolute;
+    position: static;
     left: 430px;
     top: 870.27px;
     overflow: visible;
+    
+    border-color: black;
+    border-width: 1px;
   }
-  .line-1 {
-    margin-top: -1px;
-    border-style: solid;
-    border-color: #9a999a;
-    border-width: 1px 0 0 0;
-    width: 54.04px;
-    height: 0px;
-    position: absolute;
-    left: 417px;
-    top: 850.98px;
-    transform-origin: 0 0;
-    transform: rotate(90deg) scale(1, 1);
-  }
+  
   .div18 {
     color: rgba(0, 0, 0, 0.91);
     text-align: left;
     font-family: "Inter-Thin", sans-serif;
     font-size: 24px;
     font-weight: 100;
-    position: absolute;
+    position: static;
     left: 104px;
     top: 864.14px;
     width: 133px;
     height: 45.54px;
   }
-  .div19 {
-    width: 409px;
-    height: 59.06px;
-    position: static;
-  }
-  .rectangle-21 {
-    background: #dfdee0;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.62);
-    border-width: 1px;
-    width: 409px;
-    height: 58.7px;
-    position: absolute;
-    left: 579px;
-    top: 851px;
-  }
-  .formkit-up2 {
-    width: 50px;
-    height: 17.26px;
-    position: absolute;
-    left: 927px;
-    top: 869.98px;
-    overflow: visible;
-  }
-  .line-2 {
-    margin-top: -1px;
-    border-style: solid;
-    border-color: #9a999a;
-    border-width: 1px 0 0 0;
-    width: 59.06px;
-    height: 0px;
-    position: absolute;
-    left: 917.25px;
-    top: 850.95px;
-    transform-origin: 0 0;
-    transform: rotate(90deg) scale(1, 1);
-  }
-  .div20 {
-    color: rgba(0, 0, 0, 0.91);
-    text-align: left;
-    font-family: "Inter-Thin", sans-serif;
-    font-size: 24px;
-    font-weight: 100;
-    position: absolute;
-    left: 609px;
-    top: 864.81px;
-    width: 133px;
-    height: 44.87px;
-  }
+
   .div21 {
+    margin-left: 5%;
+    margin-top:2%;
     color: #000000;
     text-align: center;
     font-family: "Inter-ExtraBold", sans-serif;
     font-size: 25px;
     font-weight: 800;
-    position: absolute;
+    position: static;
     left: 81px;
     top: 791px;
     width: 170px;
@@ -643,7 +535,7 @@
     left: 82px;
     top: 392.27px;
   }
-  ._113 {
+  .total-count {
     color: #ffffff;
     text-align: center;
     position: absolute;
