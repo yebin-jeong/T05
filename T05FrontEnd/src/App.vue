@@ -232,7 +232,7 @@
     color: #ffffff;
     text-align: left;
     font-family: "Inter-SemiBold", sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
     position: absolute;
     left: 971.77px;
@@ -357,7 +357,7 @@
     color: #ffffff;
     text-align: left;
     font-family: "Inter-SemiBold", sans-serif;
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 600;
     position: absolute;
     left: 483.77px;
@@ -428,19 +428,21 @@
     position: absolute;
     left: 753px;
     top: 615px;
-    width: 283.83px;
+    width: 300px;
     height: 40px;
   }
   .div-12-span {
     color: #ffffff;
     font-family: "Inter-SemiBold", sans-serif;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 600;
   }
   .div-12-span2 {
     color: #ffffff;
     font-family: "Inter-Regular", sans-serif;
-    font-size: 32px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 30px;
     font-weight: 400;
   }
   .rectangle-20 {
@@ -477,7 +479,7 @@
     position: absolute;
     left: 291px;
     top: 948.75px;
-    width: 200px;
+    width: 250px;
     height: 35.91px;
   }
   .div16 {
@@ -594,7 +596,7 @@
     color: #000000;
     text-align: center;
     font-family: "Inter-ExtraBold", sans-serif;
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 800;
     position: absolute;
     left: 81px;
