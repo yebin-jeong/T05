@@ -1,55 +1,24 @@
-<!-- index.html -->
+<!-- src/App.vue -->
 <template>
-  <div class="div" style="display:flex; flex-direction: column; min-width:1440px;">
-
-    <Top/>
-
-    <div style="display:flex; width:100%; padding: 0% 5%; justify-content: space-between; margin-bottom: 3%">
-      
-      <HouseNotice/>
-      <AddressBox/>
-    </div>
-
-    <div style="display:flex; width:100%; padding: 0% 5%; justify-content: space-between;">
-      <FAQ/>
-      <CompareButton/>
-    </div>
-
-    <Footer/>
-    
-    
+  <div id="app" style="min-width:1440px ">
+    <router-view></router-view>
   </div>
-
 </template>
 
 <script>
-  import FAQ from './components/FAQ.vue';
-  import Top from './components/Top.vue'
-  import HouseNotice from './components/HouseNotice.vue';
-  import Footer from './components/Footer.vue';
-  import AddressBox from './components/AddressBox.vue';
-  import CompareButton from './components/CompareButton.vue';
-  export default {
-    name: 'App',
-    components: {
-      FAQ,
-      Top,
-      HouseNotice,
-      Footer,
-      AddressBox,
-      CompareButton
-    },
-    data() {
-      return {};
-    },  
-  };  
+export default {
+  name: 'App'
+};
 </script>
 <!-- style.css -->
 <style>
+  
+
   button{
     border-radius: 15px;
     text-align: center;
     position: relative;
+    cursor:pointer;
   }
 
   .center-text{

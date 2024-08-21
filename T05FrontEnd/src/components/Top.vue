@@ -25,10 +25,16 @@
 </script>
 <style>
   .top{
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    min-width: 1440px;
     display: flex;
     padding: 2% 5%;
     justify-content: space-between;
-
+    height: 100px;
   }
   .logo {
     width: 198.18px;
