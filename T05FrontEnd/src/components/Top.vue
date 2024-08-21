@@ -1,6 +1,6 @@
 <template>
     <div class="top">
-      <div class="logo">
+      <div @click="goToMainPage" class="logo">
         <img class="vector" src="../assets/house.svg" />
         <div class="logotext">
           <span>
@@ -10,8 +10,13 @@
         </div>
         
       </div>
+      <ul class="top-navbar">
+            <li class="top-navbar-item">복지 비교하기</li>
+            <li class="top-navbar-item">주거복지 공고</li>
+            <li class="top-navbar-item">자주 묻는 질문</li>
+        </ul>
       <div class="user">
-        <img class="account-circle" src="../assets/account_circle.svg" />
+        <img @click="goToTest" class="account-circle" src="../assets/account_circle.svg" />
         <div class="username">정예빈</div>
         <img class="menu-icon" src="../assets/menu.svg" />
       </div>
@@ -20,7 +25,20 @@
 </template>
 <script>
     export default {
-        name:'TopComponent'
+      name:'TopComponent',
+      methods: {
+        goToTest() {
+          this.$router.push('/TestPage');  // '/test' 경로로 이동
+        },
+        goToMainPage(){
+          this.$router.push('/');
+        }
+      },
+      data() {
+        return {
+          
+        };
+      },
     }
 </script>
 <style>
@@ -30,7 +48,6 @@
     top: 0px;
     z-index: 10;
     width: 100%;
-    min-width: 1440px;
     display: flex;
     padding: 2% 5%;
     justify-content: space-between;
@@ -41,6 +58,7 @@
     height: 57.94px;
     position: static;
     display: flex;
+    cursor: pointer;
   }
 
   .logotext {
@@ -100,6 +118,31 @@
     height: 55px;
     position: static;
     overflow: visible;
+    cursor: pointer;
   }
  
+  .top-navbar{
+    color: #000000;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+    margin-top: 2%
+  }
+
+  .top-navbar-item:not(:last-child) {
+    border-right: 1px solid #707D87; /* 구분선을 흰색으로 추가 */
+  }
+
+  .top-navbar-item{
+    color: #707D87;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
 </style>

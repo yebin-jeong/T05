@@ -17,6 +17,7 @@
 </template>
 
 <script>
+  
   import FAQ from '../components/FAQ.vue';
   import Top from '../components/Top.vue'
   import HouseNotice from '../components/HouseNotice.vue';
@@ -25,6 +26,7 @@
   import CompareButton from '../components/CompareButton.vue';
   export default {
     name: 'MainPage',
+    
     components: {
       FAQ,
       Top,
@@ -35,7 +37,6 @@
     },
     data() {
       return {
-
       };
     },  
     methods: {
