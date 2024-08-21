@@ -27,12 +27,13 @@ export default {
 }
 </script>
 <style>
-    .footer {
+  .footer {
     background: #dfdee0;
     width: 100%;
     height: 250px;
     position: absolute;
     bottom: 0;
+    top: 720px;
   }
   
   .bottom-navbar{

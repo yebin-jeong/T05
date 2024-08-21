@@ -29,7 +29,7 @@ export default {
 <style>
     .house-notice{
     background: #3795ed;
-    width: 282px;
+    width: 20%;
     height: 334px;
     text-align: center;
     display: flex;
