@@ -30,6 +30,7 @@ export default {
   .footer {
     background: #dfdee0;
     width: 100%;
+    min-width: 1440px;
     height: 250px;
     position: absolute;
     bottom: 0;

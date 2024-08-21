@@ -59,6 +59,7 @@ export default {
     height: 126.73px;
     position: static;
     bottom: 0px;
+    padding-top: 5%;
   }
   .total-text {
     color: #ffffff;

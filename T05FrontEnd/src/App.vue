@@ -1,6 +1,6 @@
 <!-- index.html -->
 <template>
-  <div class="div" style="display:flex; flex-direction: column; ">
+  <div class="div" style="display:flex; flex-direction: column; min-width:1440px;">
 
     <Top/>
 
