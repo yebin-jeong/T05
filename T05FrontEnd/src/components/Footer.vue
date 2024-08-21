@@ -30,10 +30,9 @@ export default {
     .footer {
     background: #dfdee0;
     width: 100%;
-    height: 273px;
+    height: 250px;
     position: absolute;
-
-    top: 751px;
+    bottom: 0;
   }
   
   .bottom-navbar{

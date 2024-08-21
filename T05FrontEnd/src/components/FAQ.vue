@@ -1,5 +1,5 @@
 <template>
-    <div class="FAQ">
+    <div class="rectangle FAQ">
       <span>
         <span class="FAQ-span">자주 묻는 <span style="color: #0a69c1;">질문</span></span>
         
@@ -15,13 +15,11 @@
 
   .FAQ {
         background: #ffffff;
-        border-radius: 15px;
         border-style: solid;
         border-color: rgba(0, 0, 0, 0.33);
         border-width: 2px;
         width: 282px;
         height: 126px;
-        position: relative;
 
         text-align: center;
         font-family: "Inter-Bold", sans-serif;
@@ -38,11 +36,5 @@
         left: 50%; 
         transform: translate(-50%, -50%);
         white-space: nowrap;
-  }
-
-  .top{
-    display: flex;
-    padding: 2% 5%;
-    justify-content: space-between;
   }
 </style>

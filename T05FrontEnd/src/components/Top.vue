@@ -24,7 +24,13 @@
     }
 </script>
 <style>
-      .logo {
+  .top{
+    display: flex;
+    padding: 2% 5%;
+    justify-content: space-between;
+
+  }
+  .logo {
     width: 198.18px;
     height: 57.94px;
     position: static;
@@ -87,8 +93,6 @@
     width: 55px;
     height: 55px;
     position: static;
-    left: 1140px;
-    top: 58px;
     overflow: visible;
   }
  

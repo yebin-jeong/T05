@@ -1,5 +1,5 @@
 <template>
-    <div class="house-notice">
+    <div class="rectangle house-notice">
         <div class="house-logo" style="margin-top:5%;">
           <img class="sh-logo" src="../assets/image2.svg" />
           <img class="lh-logo" src="../assets/image1.svg" />
@@ -9,14 +9,14 @@
             <br />
             한눈에 보기
         </div>
-        <div class="total-count">
+        <div class="rectangle total-count">
           <span>
-            <span class="_113-span">
+            <span class="total-text">
               전체
               <br />
             </span>
-            <span class="_113-span2">113</span>
-            <span class="_113-span3">건</span>
+            <span class="total-text" style="font-size: 48px;">113</span>
+            <span class="total-text" style="font-size: 24px;">건</span>
           </span>
         </div>
       </div>
@@ -29,10 +29,8 @@ export default {
 <style>
     .house-notice{
     background: #3795ed;
-    border-radius: 15px;
-    width: 284.79px;
+    width: 282px;
     height: 334px;
-    position: static;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -57,28 +55,22 @@ export default {
     text-align: center;
 
     background: #1264af;
-    border-radius: 15px;
     width: 100%;
     height: 126.73px;
     position: static;
     bottom: 0px;
   }
-  ._113-span {
+  .total-text {
     color: #ffffff;
     font-family: "Inter-Bold", sans-serif;
     font-size: 24px;
     font-weight: 700;
   }
-  ._113-span2 {
+  
+  .div-22-span2 {
     color: #ffffff;
     font-family: "Inter-Bold", sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-  }
-  ._113-span3 {
-    color: #ffffff;
-    font-family: "Inter-Bold", sans-serif;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 700;
   }
 </style>
