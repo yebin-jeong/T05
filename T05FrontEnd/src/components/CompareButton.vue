@@ -1,5 +1,5 @@
 <template>
-    <button class="compare-button">
+    <button class="compare-button" @click="goToComparePage">
         <img class="arrow-right-circle" src="../assets/arrow-right-circle.svg" />
         <span style="position:absolute; left: 30%; top: 35%; white-space: nowrap;">
           <span class="div-12-span" style="font-weight: 600;">복지서비스</span>
@@ -9,7 +9,12 @@
 </template>
 <script>
 export default {
-    name: "CompareButtonComponent"
+    name: "CompareButtonComponent",
+    methods:{
+      goToComparePage(){
+        this.$router.push('/ComparePage');
+      }
+    }
 }
 </script>
 <style>

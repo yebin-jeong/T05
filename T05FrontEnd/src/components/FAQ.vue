@@ -1,5 +1,5 @@
 <template>
-    <div class="rectangle FAQ">
+    <div class="rectangle FAQ" @click="goToFAQPage">
       <span>
         <span class="center-text FAQ-span">자주 묻는 <span style="color: #0a69c1;">질문</span></span>
         
@@ -8,7 +8,12 @@
 </template>
 <script>
     export default {
-        name:'FAQComponent'
+        name:'FAQComponent',
+        methods:{
+          goToFAQPage(){
+            this.$router.push('/FAQPage');
+          }
+        }
     }
 </script>
 <style>

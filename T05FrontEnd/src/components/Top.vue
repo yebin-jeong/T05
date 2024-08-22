@@ -1,14 +1,7 @@
 <template>
     <div class="top">
       <div @click="goToMainPage" class="logo">
-        <img class="vector" src="../assets/house.svg" />
-        <div class="logotext">
-          <span>
-            <span class="logotext-span">이사</span>
-            <span class="logotext-span2">소통</span>
-          </span>
-        </div>
-        
+        <img class="vector" src="../assets/logo.svg" />
       </div>
       <ul class="top-navbar">
             <li class="top-navbar-item">복지 비교하기</li>
@@ -61,32 +54,10 @@
     cursor: pointer;
   }
 
-  .logotext {
-    text-align: left;
-    position: static;
-    left: 176.18px;
-    top: 72.94px;
-  }
-
-  .logotext-span {
-    color: #b8adad;
-    font-family: "Inter-Bold", sans-serif;
-    font-size: 32px;
-    letter-spacing: 0.01em;
-    font-weight: 700;
-  }
-
-  .logotext-span2 {
-    color: #268ae5;
-    font-family: "Inter-Bold", sans-serif;
-    font-size: 40px;
-    letter-spacing: -0.06em;
-    font-weight: 700;
-  }
-
   .vector {
     position: static;
     overflow: visible;
+    height: 80%;
   }
 
   .menu-icon {

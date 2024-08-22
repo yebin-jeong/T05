@@ -1,7 +1,7 @@
 <template>
     <div>
         <Top/>
-        <div style="width: 100%; height: 500px; background-color:gray">
+        <div style="width: 100%; height: 500px; background-color:gray; font-size: 400;">
           임대주택 정보
         </div>
     </div>
