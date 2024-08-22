@@ -24,8 +24,8 @@
     </div>
 </template>
 <script>
-    export default {
-      name:'TopComponent',
+  export default {
+    name:'TopComponent',
       methods: {
         goToTest() {
           this.$router.push('/TestPage');  // '/test' 경로로 이동
