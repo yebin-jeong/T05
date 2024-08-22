@@ -32,9 +32,8 @@ export default {
     width: 100%;
     min-width: 1440px;
     height: 250px;
-    position: absolute;
-    bottom: 0;
-    top: 720px;
+    position: relative;
+    transform : translateY(100%)
   }
   
   .bottom-navbar{

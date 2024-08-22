@@ -1,6 +1,6 @@
 <!-- src/App.vue -->
 <template>
-  <div id="app" style="min-width:1440px ">
+  <div id="app" style="min-width:1440px;  ">
     <router-view></router-view>
   </div>
 </template>
@@ -35,6 +35,11 @@ export default {
     font-family: "Inter-Regular", sans-serif;
   }
 
+  .wrapper{
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 250;
+  }
   a,
   button,
   input,

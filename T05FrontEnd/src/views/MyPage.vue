@@ -1,6 +1,6 @@
 <template>
     <Top/>
-        <div style="display: flex;">
+        <div class="wrapper" style="display: flex;">
           <div class="rectangle myPageMenu">
             <div class="menu-text">
               마이페이지
