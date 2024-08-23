@@ -8,16 +8,16 @@
             > 새 비밀번호
             <input/>
         </div>
-        <div class="changePassword-line" style="margin-bottom: 50px">
+        <div class="changePassword-line">
             > 새 비밀번호 확인
             <input/>
         </div>
 
-        <button class="changePassword-button">
+        <button class="changePassword-button" style="margin: 50px 0px">
             비밀번호 변경하기
         </button>
 
-        <div style="background-color: lightgray; height: 48px; width: 100%; text-align: center;">
+        <div style="display: flex; flex-direction: column; background-color: lightgray; height: 48px; width: 100%; align-items: center; justify-content: center; font-size: 20px;">
             회원님의 개인정보를 안전하게 보호하기 위해 3개월마다 비밀번호 변경을 권장하고 있습니다.
         </div>
     </div>
