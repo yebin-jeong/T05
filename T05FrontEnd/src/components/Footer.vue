@@ -3,13 +3,13 @@
         <div class="div21">기관별 연락처</div>
         <div style="display:flex;">
             <div class="tel-toggle">
-                <img class="formkit-up" src="../assets/formkit_up.svg" />
+                <img class="formkit-up" src="../assets/icons/formkit_up.svg" />
                 
                 <div class="div18">지역별 복지</div>
             </div>
 
             <div class="tel-toggle">
-                <img class="formkit-up" src="../assets/formkit_up.svg" />
+                <img class="formkit-up" src="../assets/icons/formkit_up.svg" />
                 <div class="div18">정부 기관</div>
             </div>
         </div>

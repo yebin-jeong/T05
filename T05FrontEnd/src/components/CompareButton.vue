@@ -1,6 +1,6 @@
 <template>
     <button class="compare-button" @click="goToComparePage">
-        <img class="arrow-right-circle" src="../assets/arrow-right-circle.svg" />
+        <img class="arrow-right-circle" src="../assets/icons/arrow-right-circle.svg" />
         <span style="position:absolute; left: 30%; top: 35%; white-space: nowrap;">
           <span class="div-12-span" style="font-weight: 600;">복지서비스</span>
           <span class="div-12-span" style="margin-left: 5%;margin-right: 5%;">비교하기</span>

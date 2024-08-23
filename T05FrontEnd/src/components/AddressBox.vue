@@ -5,7 +5,7 @@
             <button class="address-change-button current-button">
               <img
               class="button-arrow"
-              src="../assets/material-symbols-light_transit-enterexit.svg"
+              src="../assets/icons/material-symbols-light_transit-enterexit.svg"
               />
                 <span style="position: absolute; left: 10%; top: 25%">주소지 설정</span>
             </button>
@@ -24,7 +24,7 @@
             <div>
               <img
                   class="button-arrow"
-                  src="../assets/material-symbols-light_transit-enterexit.svg"
+                  src="../assets/icons/material-symbols-light_transit-enterexit.svg"
                 />
               <span style="position: absolute; left: 10%; top: 25%">주소지 설정</span>
             </div>

@@ -90,10 +90,10 @@ export default {
     return{
       currentSlide: 0,
       slides: [
-        { image: require('../assets/투명.png'), alt: '' },
-        { image: require('../assets/poster1.png'), alt: 'Slide 2' },
-        { image: require('../assets/poster2.png'), alt: 'Slide 3' },
-        { image: require('../assets/poster3.png'), alt: 'Slide 4' }
+        { image: require('../assets/poster/투명.png'), alt: '' },
+        { image: require('../assets/poster/poster1.png'), alt: 'Slide 2' },
+        { image: require('../assets/poster/poster2.png'), alt: 'Slide 3' },
+        { image: require('../assets/poster/poster3.png'), alt: 'Slide 4' }
       ],
     }
   }

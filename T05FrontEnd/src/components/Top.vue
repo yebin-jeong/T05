@@ -9,9 +9,9 @@
             <li class="top-navbar-item">자주 묻는 질문</li>
         </ul>
       <div class="user">
-        <img @click="goToTest" class="account-circle" src="../assets/account_circle.svg" />
+        <img @click="goToTest" class="account-circle" src="../assets/icons/account_circle.svg" />
         <div class="username">정예빈</div>
-        <img class="menu-icon" src="../assets/menu.svg" />
+        <img class="menu-icon" src="../assets/icons/menu.svg" />
       </div>
       
     </div>

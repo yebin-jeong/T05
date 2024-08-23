@@ -31,10 +31,10 @@
 <script>
 import Top from '@/components/Top.vue';
 import Footer from '@/components/Footer.vue';
-import MyInfo from '@/components/MyInfo.vue';
-import ChangePassword from '@/components/ChangePassword.vue';
-import MySelfTest from '@/components/MySelfTest.vue';
-import ScrappedNotice from '@/components/ScrappedNotice.vue';
+import MyInfo from '@/components/MyPage/MyInfo.vue';
+import ChangePassword from '@/components/MyPage/ChangePassword.vue';
+import MySelfTest from '@/components/MyPage/MySelfTest.vue';
+import ScrappedNotice from '@/components/MyPage/ScrappedNotice.vue';
 export default {
   name: 'MyPage',
   components:{
@@ -114,6 +114,7 @@ export default {
   }
   .myPageMenu-navbar li {
     margin-bottom:7%;
+    cursor:pointer;
   }
 
   .myPageMain{
