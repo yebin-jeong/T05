@@ -9,19 +9,20 @@
             </div>
           
             <div class="rectangle myPageMenu-2">
-              <span style="border-bottom: solid navy;">회원정보</span>
               <ul class="myPageMenu-navbar">
-                <li>비밀번호 변경</li>
-                <li>나의 자가진단</li>
-                <li>공고문 스크랩</li>
+                <li :class="{ selected: selectedMenu === 0 }" @click="selectMenu(0)">회원정보</li>
+                <li :class="{ selected: selectedMenu === 1 }" @click="selectMenu(1)">비밀번호 변경</li>
+                <li :class="{ selected: selectedMenu === 2 }" @click="selectMenu(2)">나의 자가진단</li>
+                <li :class="{ selected: selectedMenu === 3 }" @click="selectMenu(3)">공고문 스크랩</li>
               </ul>
             </div>
             
           </div>
 
           <div class="myPageMain">
-            <div>메뉴 > 마이페이지 > 회원정보</div>
-            <div style="width: 80%;"></div>
+            <div>메뉴 > 마이페이지 > {{ currentMenuText }}</div>
+            <hr style="position: relative; margin: 25px 0px; border: 1px solid lightgray;"/>
+            <div style="width: 100%;"></div>
             <component :is="currentView" />
           </div>
         </div>
@@ -30,20 +31,47 @@
 <script>
 import Top from '@/components/Top.vue';
 import Footer from '@/components/Footer.vue';
-import MyPage1 from '@/components/MyPage1.vue';
+import MyInfo from '@/components/MyInfo.vue';
+import ChangePassword from '@/components/ChangePassword.vue';
+import MySelfTest from '@/components/MySelfTest.vue';
+import ScrappedNotice from '@/components/ScrappedNotice.vue';
 export default {
   name: 'MyPage',
   components:{
     Top,
     Footer,
-    MyPage1
+    MyInfo,
+    ChangePassword,
+    MySelfTest,
+    ScrappedNotice
   },
 
   data() {
     return {
-      currentView: 'MyPage1',
+      currentMenuText:'회원정보',
+      selectedMenu:0,
+      currentView: 'MyInfo',
+      pages:[
+        MyInfo,
+        ChangePassword,
+        MySelfTest,
+        ScrappedNotice
+      ],
+      menuTexts: [
+        '회원정보',
+        '비밀번호 변경',
+        '나의 자가진단',
+        '공고문 스크랩'
+      ]
     };
   },
+  methods:{
+    selectMenu(divNumber){
+      this.selectedMenu=divNumber;
+      this.currentView=this.pages[divNumber];
+      this.currentMenuText=this.menuTexts[divNumber];
+    }
+  }
 };
 </script>
 <style>
@@ -66,7 +94,7 @@ export default {
     background-color: white;
     margin: 2.5%;
     color:black;
-    padding:7%;
+    padding:3% 7%;
     font-size: 20px;
     font-weight: 600;
     color:navy;
@@ -90,5 +118,12 @@ export default {
 
   .myPageMain{
     margin-top: 12%;
+    width: 70%;
+  }
+
+  .selected{
+    border-bottom: solid navy;
+    font-weight: 700;
+    color:navy
   }
 </style>
