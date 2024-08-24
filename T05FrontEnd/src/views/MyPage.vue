@@ -76,7 +76,7 @@ export default {
 </script>
 <style>
   .myPageMenu{
-    width: 15%;
+    width: 250px;
     height: 334px;
     background-color: #1264af;
     
@@ -94,7 +94,7 @@ export default {
     background-color: white;
     margin: 2.5%;
     color:black;
-    padding:3% 7%;
+    padding:2% 7%;
     font-size: 20px;
     font-weight: 600;
     color:navy;
@@ -110,10 +110,10 @@ export default {
   .myPageMenu-navbar{
     color: black;
     font-weight: 500;
-    margin-top:10%;
+    margin:10% 0%;
   }
   .myPageMenu-navbar li {
-    margin-bottom:7%;
+    margin-bottom:6%;
     cursor:pointer;
   }
 

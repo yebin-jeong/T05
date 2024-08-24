@@ -1,17 +1,18 @@
 <template>
-  <div>
+  <div style="height:100%">
     <Top/>
-    <div class="wrapper" style="margin-top: 7%;display:flex; width:100%; padding: 0% 5%; justify-content: space-between; margin-bottom: 3%">
-      
-      <HouseNotice/>
-      <AddressBox/>
-    </div>
+    <div class="wrapper">
+      <div class="wrapper" style="margin-top: 7%;display:flex; width:100%; padding: 0% 5%; justify-content: space-between; margin-bottom: 3%">
+        
+        <HouseNotice/>
+        <AddressBox/>
+      </div>
 
-    <div style="display:flex; width:100%; padding: 0% 5%; justify-content: space-between;">
-      <FAQ/>
-      <CompareButton/>
+      <div style="display:flex; width:100%; padding: 0% 5%; justify-content: space-between;">
+        <FAQ/>
+        <CompareButton/>
+      </div>
     </div>
-
     <Footer/>
   </div>
 </template>
@@ -53,6 +54,12 @@
     text-align: center;
     position: relative;
     cursor:pointer;
+  }
+
+  .wrapper{
+    height:auto;
+    min-height: 100%;
+    padding-bottom: 250px
   }
 
   .center-text{

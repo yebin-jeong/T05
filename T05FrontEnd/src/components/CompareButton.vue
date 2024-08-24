@@ -1,11 +1,16 @@
 <template>
     <button class="compare-button" @click="goToComparePage">
-        <img class="arrow-right-circle" src="../assets/icons/arrow-right-circle.svg" />
-        <span style="position:absolute; left: 30%; top: 35%; white-space: nowrap;">
+      
+      <div style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
+        <span style=" white-space: nowrap;">
           <span class="div-12-span" style="font-weight: 600;">복지서비스</span>
           <span class="div-12-span" style="margin-left: 5%;margin-right: 5%;">비교하기</span>
         </span>
-      </button>
+      </div>
+      <div style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
+        <img class="arrow-right-circle" src="../assets/icons/arrow-right-circle.svg" />
+      </div>
+    </button>
 </template>
 <script>
 export default {
@@ -29,12 +34,13 @@ export default {
     font-family: "-", sans-serif;
     font-size: 32px;
     font-weight: 400;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
   }
 
   .arrow-right-circle {
-    position: absolute;
+    position: relative;
     overflow: visible;
-    left: 60%;
-    top: 25%
   }  
 </style>

@@ -42,6 +42,7 @@ export default {
         display: flex;
         justify-content: space-between;
         width: 50%;
+        white-space: nowrap;
     }
 
     .changePassword-button{
@@ -51,6 +52,7 @@ export default {
         font-size: 30px;
         font-weight: 600;
         padding: 1% 10%;
+        
     }
 
     input{

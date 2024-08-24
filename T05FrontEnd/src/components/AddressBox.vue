@@ -4,10 +4,10 @@
           <div>
             <button class="address-change-button current-button">
               <img
-              class="button-arrow"
-              src="../assets/icons/material-symbols-light_transit-enterexit.svg"
+                class="button-arrow"
+                src="../assets/icons/material-symbols-light_transit-enterexit.svg"
               />
-                <span style="position: absolute; left: 10%; top: 25%">주소지 설정</span>
+              <span style="position: absolute; left: 10%; top: 25%">주소지 설정</span>
             </button>
           </div>
           <div class="rectangle address-text">
@@ -17,25 +17,24 @@
               상암동 월드컵북로 123
             </div>
           </div>
-          
         </div>
+        
         <div class="rectangle address future">
-          <button class="address-change-button future-button">
-            <div>
+          <div>
+            <button class="address-change-button future-button">
               <img
-                  class="button-arrow"
-                  src="../assets/icons/material-symbols-light_transit-enterexit.svg"
-                />
+                class="button-arrow"
+                src="../assets/icons/material-symbols-light_transit-enterexit.svg"
+              />
               <span style="position: absolute; left: 10%; top: 25%">주소지 설정</span>
-            </div>
-          </button>
+            </button>
+          </div>
           <div class="rectangle address-text">
-            <div class="center-text">
-              서울특별시 강서구
+              <div class="center-text">
+              서울특별시 마포구
               <br />
-              우장산동 우장산로 123
+              상암동 월드컵북로 123
             </div>
-            
           </div>
         </div>   
       </div>

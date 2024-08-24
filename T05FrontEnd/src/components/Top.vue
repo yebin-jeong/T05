@@ -1,19 +1,20 @@
 <template>
     <div class="top">
-      <div @click="goToMainPage" class="logo">
-        <img class="vector" src="../assets/logo.svg" />
+      <div class="top-wrapper">
+        <div @click="goToMainPage" class="logo">
+          <img class="vector" src="../assets/logo.svg" />
+        </div>
+        <ul class="top-navbar">
+              <li class="top-navbar-item">복지 비교하기</li>
+              <li class="top-navbar-item">주거복지 공고</li>
+              <li class="top-navbar-item">자주 묻는 질문</li>
+          </ul>
+        <div class="user">
+          <img @click="goToTest" class="account-circle" src="../assets/icons/account_circle.svg" />
+          <div class="username">정예빈</div>
+          <img class="menu-icon" src="../assets/icons/menu.svg" />
+        </div>
       </div>
-      <ul class="top-navbar">
-            <li class="top-navbar-item">복지 비교하기</li>
-            <li class="top-navbar-item">주거복지 공고</li>
-            <li class="top-navbar-item">자주 묻는 질문</li>
-        </ul>
-      <div class="user">
-        <img @click="goToTest" class="account-circle" src="../assets/icons/account_circle.svg" />
-        <div class="username">정예빈</div>
-        <img class="menu-icon" src="../assets/icons/menu.svg" />
-      </div>
-      
     </div>
 </template>
 <script>
@@ -42,10 +43,22 @@
     z-index: 10;
     width: 100%;
     display: flex;
+    flex-direction: column;
     padding: 2% 5%;
+    justify-content: center;
+    height: 100px;
+  }
+
+  .top-wrapper{
+    background-color: white;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    display: flex;
     justify-content: space-between;
     height: 100px;
   }
+
   .logo {
     width: 198.18px;
     height: 57.94px;
@@ -103,7 +116,6 @@
     justify-content: center;
     align-items: center;
     padding-left: 5%;
-    margin-top: 2%
   }
 
   .top-navbar-item:not(:last-child) {

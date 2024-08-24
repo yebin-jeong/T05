@@ -172,10 +172,8 @@ export default {
 }
 
 .pagination {
-  position: absolute;
-  top: 52%;
-  left:11%;
-  transform: translateX(50%);
+  position: relative;
+  transform: translate(-400%, 105%);
   display: flex;
   gap: 5px;
 }
