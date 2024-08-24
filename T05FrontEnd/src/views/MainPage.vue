@@ -1,9 +1,8 @@
 <template>
-  <div style="height:100%">
+
     <Top/>
     <div class="wrapper">
-      <div class="wrapper" style="margin-top: 7%;display:flex; width:100%; padding: 0% 5%; justify-content: space-between; margin-bottom: 3%">
-        
+      <div style="margin-top: 7%;display:flex; width:100%; padding: 0% 5%; justify-content: space-between; margin-bottom: 3%">
         <HouseNotice/>
         <AddressBox/>
       </div>
@@ -14,7 +13,7 @@
       </div>
     </div>
     <Footer/>
-  </div>
+
 </template>
 
 <script>
@@ -60,14 +59,6 @@
     height:auto;
     min-height: 100%;
     padding-bottom: 250px
-  }
-
-  .center-text{
-    position:absolute;
-    top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
   }
   
   .rectangle {

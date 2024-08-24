@@ -40,13 +40,15 @@
     background-color: white;
     position: fixed;
     top: 0px;
+    left:0px;
     z-index: 10;
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 2% 5%;
     justify-content: center;
-    height: 100px;
+    height: 120px;
+    min-width: 1440px;
   }
 
   .top-wrapper{
@@ -70,7 +72,7 @@
   .vector {
     position: static;
     overflow: visible;
-    height: 80%;
+    
   }
 
   .menu-icon {

@@ -29,11 +29,14 @@ export default {
 <style>
   .footer {
     background: #dfdee0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     min-width: 1440px;
     height: 250px;
     position: relative;
-    transform : translateY(100%)
+    transform : translateY(100%);
   }
   
   .bottom-navbar{
@@ -96,7 +99,6 @@ export default {
 
   .div21 {
     margin-left: 5%;
-    margin-top:2%;
     color: #000000;
     text-align: center;
     font-family: "Inter-ExtraBold", sans-serif;

@@ -11,11 +11,9 @@
             </button>
           </div>
           <div class="rectangle address-text">
-              <div class="center-text">
-              서울특별시 마포구
-              <br />
-              상암동 월드컵북로 123
-            </div>
+            서울특별시 마포구
+            <br />
+            상암동 월드컵북로 123
           </div>
         </div>
         
@@ -30,11 +28,9 @@
             </button>
           </div>
           <div class="rectangle address-text">
-              <div class="center-text">
-              서울특별시 마포구
-              <br />
-              상암동 월드컵북로 123
-            </div>
+            서울특별시 마포구
+            <br />
+            상암동 월드컵북로 123
           </div>
         </div>   
       </div>
@@ -46,7 +42,7 @@ export default {
 </script>
 <style>
     .address-box{
-    width: 75%;
+    width: 970px;
     display:flex;
     justify-content: space-between;
   }
@@ -96,6 +92,9 @@ export default {
     font-size: 36px;
     font-weight: 400;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .button-arrow {

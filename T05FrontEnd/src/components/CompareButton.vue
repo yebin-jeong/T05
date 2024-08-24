@@ -25,7 +25,7 @@ export default {
 <style>
 .compare-button {
     background: #1f72d3;
-    width: 75%;
+    width: 970px;
     height: 126px;
     position: relative;
 

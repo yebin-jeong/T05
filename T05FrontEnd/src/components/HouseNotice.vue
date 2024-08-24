@@ -102,7 +102,7 @@ export default {
 <style>
   .house-notice{
     background: #3795ed;
-    width: 20%;
+    width: 250px;
     height: 334px;
     text-align: center;
     display: grid;
@@ -173,7 +173,7 @@ export default {
 
 .pagination {
   position: relative;
-  transform: translate(-400%, 105%);
+  transform: translate(-160px, 350px);
   display: flex;
   gap: 5px;
 }

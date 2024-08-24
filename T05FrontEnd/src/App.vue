@@ -1,7 +1,10 @@
 <!-- src/App.vue -->
 <template>
-  <div id="app" style="min-width:1440px;  ">
-    <router-view></router-view>
+  <div id="app" style="min-width:1440px;  display: flex; justify-content: center;">
+    <div style="min-height: 100%; display: flex; flex-direction: column; justify-content: center;">
+      <router-view></router-view>
+    </div>
+      
   </div>
 </template>
 
@@ -21,13 +24,7 @@ export default {
     cursor:pointer;
   }
 
-  .center-text{
-    position:absolute;
-    top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
-  }
+
   
   .rectangle {
     border-radius: 15px;
@@ -38,7 +35,10 @@ export default {
   .wrapper{
     height: auto;
     min-height: 100%;
-    padding-bottom: 250;
+    padding-bottom: 250px;
+    width: 1440px; 
+    justify-self: center;
+    padding-top: 120px;
   }
   a,
   button,
