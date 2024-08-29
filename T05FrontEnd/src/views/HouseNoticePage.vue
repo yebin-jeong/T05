@@ -29,7 +29,7 @@
       </ul>
       <div style="display: flex; justify-content: center; flex-direction: center;">
         <div v-if="totalPages > 1" class="pagination">
-          <button @click="changePage(1)" :disabled="page <= 1">처음</button>
+          <button @click="changePage(1)" :disabled="page <= 1"><span>&lt;</span><span>&lt;</span></button>
           <button @click="changePage(page - 1)" :disabled="page <= 1">&lt;</button>
           
           <button v-if="page > 3" @click="changePage(page - 3)">{{ page - 3 }}</button>
@@ -42,8 +42,8 @@
           <button v-if="page < totalPages - 1" @click="changePage(page + 2)">{{ page + 2 }}</button>
           <button v-if="page < totalPages - 2" @click="changePage(page + 3)">{{ page + 3 }}</button>
           
-          <button @click="changePage(totalPages)" :disabled="page >= totalPages">마지막</button>
-          <button @click="changePage(page + 1)" :disabled="page >= totalPages">&gt;</button>
+          <button @click="changePage(page + 1)" :disabled="page >= totalPages"><span>&gt;</span></button>
+          <button @click="changePage(totalPages)" :disabled="page >= totalPages"><span>&gt;</span><span>&gt;</span></button>
         </div>
       </div>
      
@@ -93,7 +93,7 @@ export default {
           params: {
             serviceKey: '0khvXNpZtCdvzH1Dw76HNtpDP/XhiNIzhKRU43Dnphe7oXSziRtpdtaP4FORD5VYkOYFt2vqQQO1VklahVTOsA==', // 실제 서비스 키로 교체
             PG_SZ: '10',
-            PAGE: '1'
+            PAGE: this.page,
           }
         });
 
