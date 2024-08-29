@@ -1,20 +1,187 @@
 <template>
-    <div>
-        <Top/>
-        <div style="width: 100%; height: 500px; background-color:gray; font-size: 400;">
-          임대주택 정보
+  <div>
+    <Top/>
+    <div class="HouseNoticePage-Wrapper">
+      <div style="text-align: center; font-size: 36px; margin-bottom: 3%; font-weight: 700;">주거복지 임대 공고문</div>
+      <div style="display:flex; justify-content: space-evenly">
+        <button class="pan-button"><span style="font-weight: 600;">LH 주거복지 임대</span> 확인</button>
+        <button class="pan-button" style="background-color: #9a999a;"><span style="font-weight: 600;">SH 주거복지 임대</span> 확인</button>
+      </div>
+      <ul  v-if="notices.length">
+        <li v-for="(notice, index) in notices" :key="index">
+          <div>  
+            <div class="HouseNoticelist">
+              {{ notice.PAN_NM }}
+              <div style="display: flex;">
+                <div>
+                  <div style="color:blue; font-size: 28px; font-weight: 700;">
+                      D- {{ notice.PAN_NT_ST_DT }}
+                  </div>
+                  <div style="font-size:20px;font-weight: 500;">
+                      공고일: {{ notice.PAN_NT_ST_DT }}
+                  </div>
+                </div> 
+                <img class="star" src="@/assets/icons/Star.svg">
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div style="display: flex; justify-content: center; flex-direction: center;">
+        <div v-if="totalPages > 1" class="pagination">
+          <button @click="changePage(1)" :disabled="page <= 1">처음</button>
+          <button @click="changePage(page - 1)" :disabled="page <= 1">&lt;</button>
+          
+          <button v-if="page > 3" @click="changePage(page - 3)">{{ page - 3 }}</button>
+          <button v-if="page > 2" @click="changePage(page - 2)">{{ page - 2 }}</button>
+          <button v-if="page > 1" @click="changePage(page - 1)">{{ page - 1 }}</button>
+          
+          <button class="active">{{ page }}</button>
+          
+          <button v-if="page < totalPages" @click="changePage(page + 1)">{{ page + 1 }}</button>
+          <button v-if="page < totalPages - 1" @click="changePage(page + 2)">{{ page + 2 }}</button>
+          <button v-if="page < totalPages - 2" @click="changePage(page + 3)">{{ page + 3 }}</button>
+          
+          <button @click="changePage(totalPages)" :disabled="page >= totalPages">마지막</button>
+          <button @click="changePage(page + 1)" :disabled="page >= totalPages">&gt;</button>
         </div>
+      </div>
+     
     </div>
+    <Footer/>
+  </div>
 </template>
 <script>
+import axios from 'axios';
 import Top from '@/components/Top.vue';
+import Footer from '@/components/Footer.vue';
 export default {
   name: 'HouseNoticePage',
   components:{
-    Top
+    Top,
+    Footer
   },
+  data() {
+    return {
+      notices: [], // 공고 목록
+      loading: true, // 데이터 로딩 상태
+      error: null, // 오류 메시지
+      totalPages:'100',
+      page:1,
+      pageSize: 10
+    };
+  },
+  computed: {
+    // 페이지 버튼을 생성하기 위한 페이지 번호 배열
+    pageNumbers() {
+      const numbers = [];
+      const maxPagesToShow = 5; // 표시할 최대 페이지 수
+      const startPage = Math.max(1, this.page - Math.floor(maxPagesToShow / 2));
+      const endPage = Math.min(this.totalPages, startPage + maxPagesToShow - 1);
+      for (let i = startPage; i <= endPage; i++) {
+        numbers.push(i);
+      }
+      return numbers;
+    }
+  },
+  methods: {
+    async fetchNotices() {
+      const url = 'http://apis.data.go.kr/B552555/lhLeaseNoticeInfo1/lhLeaseNoticeInfo1'; // 실제 API 엔드포인트로 교체
+
+      try {
+        const response = await axios.get(url, {
+          params: {
+            serviceKey: '0khvXNpZtCdvzH1Dw76HNtpDP/XhiNIzhKRU43Dnphe7oXSziRtpdtaP4FORD5VYkOYFt2vqQQO1VklahVTOsA==', // 실제 서비스 키로 교체
+            PG_SZ: '10',
+            PAGE: '1'
+          }
+        });
+
+        console.log(response.data); // 응답 데이터 로그 출력
+
+        // JSON 응답이 문자열일 경우 파싱
+        let responseData = response.data;
+        if (typeof responseData == 'string') {
+          try {
+            console.log('responseData string')
+            responseData = JSON.parse(responseData);
+            this.notices=responseData;
+          } catch (parseError) {
+            this.error = 'JSON 파싱 오류: ' + parseError.message;
+            return;
+          }
+        }
+
+        if (responseData.dsList && Array.isArray(responseData.dsList)) {
+          this.notices = responseData.dsList || [];
+        } else if (responseData.dsList){
+          this.error = 'dslist 없음';
+        } else if(!Array.isArray(responseData.dsList)){
+          console.log('responseData : '+ responseData);
+          this.notices = response.data[1].dsList;
+          //this.error='dslist가 배열이 아님'
+        }
+      } catch (error) {
+        this.error = error.message;
+      } finally {        
+        this.loading = false;
+      }
+    },
+    changePage(newPage) {
+      if (newPage < 1 || newPage > this.totalPages) return; // 페이지 범위 체크
+      this.page = newPage;
+      this.fetchNotices(); // 새로운 페이지의 데이터를 가져옵니다
+    }
+  },
+  created() {
+    this.fetchNotices();
+  }
 };
+
 </script>
 <style>
-    
+    .HouseNoticePage-Wrapper{
+      margin-top: 7%;
+        font-size:24px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        justify-content: center;
+        padding:2%;
+    }
+
+    .HouseNoticelist{
+        padding:2%;
+        border: solid lightgray 1px;
+        display: flex;
+        justify-content: space-between;
+        margin: 1%;
+    }
+
+    .star{
+        position:relative;
+        right:-10px;
+        top:-30px;
+    }
+
+    .pan-button{
+      font-size: 24px;
+      border-radius: 35ch;
+      background-color: #1F72D3;
+      color: white;
+      padding:1.5% 5%;  
+    }
+
+  .pagination{
+
+    position: absolute;
+    top: 1400px;
+    left: 40%;
+  }
+  .pagination button {
+    font-size: 20px;
+    padding: 20px;
+    margin: 0px 20px;
+  }
 </style>
