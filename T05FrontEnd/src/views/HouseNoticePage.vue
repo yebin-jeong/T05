@@ -9,11 +9,11 @@
       </div>
       <ul  v-if="notices.length">
         <li v-for="(notice, index) in notices" :key="index">
-          <div>  
+          <div @click="goToDetail(notice.PAN_NM)">  
             <div class="HouseNoticelist">
               {{ notice.PAN_NM }}
               <div style="display: flex;">
-                <div>
+                <div style="width: 200px;">
                   <div style="color:blue; font-size: 28px; font-weight: 700;">
                       D- {{ notice.PAN_NT_ST_DT }}
                   </div>
@@ -27,24 +27,8 @@
           </div>
         </li>
       </ul>
-      <div style="display: flex; justify-content: center; flex-direction: center;">
-        <div v-if="totalPages > 1" class="pagination">
-          <button @click="changePage(1)" :disabled="page <= 1"><span>&lt;</span><span>&lt;</span></button>
-          <button @click="changePage(page - 1)" :disabled="page <= 1">&lt;</button>
-          
-          <button v-if="page > 3" @click="changePage(page - 3)">{{ page - 3 }}</button>
-          <button v-if="page > 2" @click="changePage(page - 2)">{{ page - 2 }}</button>
-          <button v-if="page > 1" @click="changePage(page - 1)">{{ page - 1 }}</button>
-          
-          <button class="active">{{ page }}</button>
-          
-          <button v-if="page < totalPages" @click="changePage(page + 1)">{{ page + 1 }}</button>
-          <button v-if="page < totalPages - 1" @click="changePage(page + 2)">{{ page + 2 }}</button>
-          <button v-if="page < totalPages - 2" @click="changePage(page + 3)">{{ page + 3 }}</button>
-          
-          <button @click="changePage(page + 1)" :disabled="page >= totalPages"><span>&gt;</span></button>
-          <button @click="changePage(totalPages)" :disabled="page >= totalPages"><span>&gt;</span><span>&gt;</span></button>
-        </div>
+      <div style="width: 100%; display: flex; justify-content: center; ">
+        <HouseNoticePagination v-if="totalPages>1" :page="page" :totalPages="totalPages" @changePage="changePage"></HouseNoticePagination>
       </div>
      
     </div>
@@ -55,18 +39,20 @@
 import axios from 'axios';
 import Top from '@/components/Top.vue';
 import Footer from '@/components/Footer.vue';
+import HouseNoticePagination from '@/components/HouseNoticePage/HouseNoticePagination.vue';
 export default {
   name: 'HouseNoticePage',
   components:{
     Top,
-    Footer
+    Footer,
+    HouseNoticePagination
   },
   data() {
     return {
       notices: [], // 공고 목록
       loading: true, // 데이터 로딩 상태
       error: null, // 오류 메시지
-      totalPages:'100',
+      totalPages:'50',
       page:1,
       pageSize: 10
     };
@@ -131,6 +117,13 @@ export default {
       if (newPage < 1 || newPage > this.totalPages) return; // 페이지 범위 체크
       this.page = newPage;
       this.fetchNotices(); // 새로운 페이지의 데이터를 가져옵니다
+    },
+    scrapNotice(){
+
+    },
+    goToDetail(id) {
+      // 상세 페이지로 이동
+      this.$router.push({ name: 'NoticeDetail', params: { id } });
     }
   },
   created() {
@@ -156,6 +149,7 @@ export default {
         border: solid lightgray 1px;
         display: flex;
         justify-content: space-between;
+        gap: 20px;
         margin: 1%;
     }
 
@@ -163,6 +157,11 @@ export default {
         position:relative;
         right:-10px;
         top:-30px;
+        filter: saturate(0);
+    }
+
+    .scrapped{
+        filter: saturate(100);
     }
 
     .pan-button{

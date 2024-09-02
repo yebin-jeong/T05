@@ -4,6 +4,8 @@ import MyPage from '@/views/MyPage.vue';
 import HouseNoticePage from '@/views/HouseNoticePage.vue';
 import FAQPage from '@/views/FAQPage.vue';
 import ComparePage from '@/views/ComparePage.vue';
+import HouseNoticeDetailPage from '@/views/HouseNoticeDetailPage.vue';
+
 const routes = [
     {
         path: '/',
@@ -29,6 +31,11 @@ const routes = [
         path: '/ComparePage',
         name: 'ComparePage',
         component: ComparePage
+    },
+    {
+        path: '/HouseNoticeDetailPage',
+        name: 'HouseNoticeDetailPage',
+        component: HouseNoticeDetailPage
     }
 ]
 

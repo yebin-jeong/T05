@@ -6,7 +6,7 @@
         </div>
         <ul class="top-navbar">
               <li class="top-navbar-item">복지 비교하기</li>
-              <li class="top-navbar-item">주거복지 공고</li>
+              <li @click="goToHouseNoticePage" class="top-navbar-item">주거복지 공고</li>
               <li class="top-navbar-item">자주 묻는 질문</li>
           </ul>
         <div class="user">
@@ -26,6 +26,9 @@
         },
         goToMainPage(){
           this.$router.push('/');
+        },
+        goToHouseNoticePage(){
+          this.$router.push('/HouseNoticePage')
         }
       },
       data() {
