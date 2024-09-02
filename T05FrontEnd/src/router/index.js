@@ -33,8 +33,9 @@ const routes = [
         component: ComparePage
     },
     {
-        path: '/HouseNoticeDetailPage',
+        path: '/HouseNoticeDetailPage/:id',
         name: 'HouseNoticeDetailPage',
+        props: true,
         component: HouseNoticeDetailPage
     }
 ]

@@ -73,7 +73,6 @@ export default {
   methods: {
     async fetchNotices() {
       const url = 'http://apis.data.go.kr/B552555/lhLeaseNoticeInfo1/lhLeaseNoticeInfo1'; // 실제 API 엔드포인트로 교체
-
       try {
         const response = await axios.get(url, {
           params: {
@@ -85,18 +84,7 @@ export default {
 
         console.log(response.data); // 응답 데이터 로그 출력
 
-        // JSON 응답이 문자열일 경우 파싱
         let responseData = response.data;
-        if (typeof responseData == 'string') {
-          try {
-            console.log('responseData string')
-            responseData = JSON.parse(responseData);
-            this.notices=responseData;
-          } catch (parseError) {
-            this.error = 'JSON 파싱 오류: ' + parseError.message;
-            return;
-          }
-        }
 
         if (responseData.dsList && Array.isArray(responseData.dsList)) {
           this.notices = responseData.dsList || [];
@@ -105,7 +93,6 @@ export default {
         } else if(!Array.isArray(responseData.dsList)){
           console.log('responseData : '+ responseData);
           this.notices = response.data[1].dsList;
-          //this.error='dslist가 배열이 아님'
         }
       } catch (error) {
         this.error = error.message;
@@ -123,7 +110,8 @@ export default {
     },
     goToDetail(id) {
       // 상세 페이지로 이동
-      this.$router.push({ name: 'NoticeDetail', params: { id } });
+      console.log('Navigating to NoticeDetail with id:', id);
+      this.$router.push({ name: 'HouseNoticeDetailPage', params: { id } });
     }
   },
   created() {
