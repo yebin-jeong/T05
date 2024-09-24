@@ -41,7 +41,7 @@
 <style>
   .top{
     background-color: white;
-    position: fixed;
+    position: relative;
     top: 0px;
     left:0px;
     z-index: 10;

@@ -3,7 +3,7 @@
         <Top/>
         <div class="SignUpPage-Wrapper">
             <h2>회원가입</h2>
-            <div :class="$style.div">회원정보</div>
+            <div>회원정보</div>
             <form @submit.prevent="signUp">
                 <div>
                     <label for="username">아이디 (이메일)</label>
@@ -103,7 +103,6 @@ export default {
       emailDomains: [
         'naver.com',
         'gmail.com',
-        'yahoo.com',
         'daum.net'
       ],
       birthYear: '', // 선택된 출생년도
